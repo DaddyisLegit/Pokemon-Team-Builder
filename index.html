@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokémon Team Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Pixelify+Sans:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Pokédex Console Housing -->
+  <div class="pokedex-casing">
+    <!-- Pokédex Top Sensor Bar -->
+    <header class="pokedex-sensor-bar">
+      <div class="sensor-main">
+        <div class="sensor-eye">
+          <div class="sensor-glint"></div>
+          <div class="sensor-ring"></div>
+        </div>
+      </div>
+      <div class="sensor-cluster">
+        <span class="led led-red" title="System Power"></span>
+        <span class="led led-amber" title="Analysis Unit"></span>
+        <span class="led led-green" title="Dex Database Online"></span>
+      </div>
+      <div class="pokedex-model-tag">
+        <span class="model-code">ROTOM-OS // PKDX-v9.4</span>
+        <span class="model-sub">SILPH CO. SPEC</span>
+      </div>
+    </header>
+
+    <!-- Main Screen Glass Enclosure -->
+    <div class="pokedex-screen-housing">
+      <main class="app pokedex-screen">
+        <!-- High-Tech Screen Top Status Bar -->
+        <div class="screen-status-bar">
+          <div class="status-left">
+            <span class="rec-dot"></span>
+            <span class="status-mode">TRAINER BATTLE HUD</span>
+          </div>
+          <!-- 6-Pokéball Party Belt / Rack -->
+          <div class="party-tray-wrap">
+            <span class="party-tray-label">PARTY:</span>
+            <div id="party-tray" class="party-tray" title="Party Status"></div>
+          </div>
+          <div class="status-right">
+            <span class="status-dex">REGIONAL SYNC</span>
+            <span class="dex-signal"><span></span><span></span><span></span></span>
+          </div>
+        </div>
+
+        <header class="app-header">
+          <div class="header-badge-wrap">
+            <span class="badge"><span class="badge-pokeball"></span>TEAM SELECTOR</span>
+          </div>
+          <h1>POKEMON TEAM BUILDER</h1>
+          <p class="subtitle">Ray-RUN EM DOWN-quaza.</p>
+        </header>
+
+        <!-- Rule counters (legendary / pseudo / mega / team size) -->
+        <div id="rules" class="rules"></div>
+
+        <!-- The 6 team slots -->
+        <section id="slots" class="slots"></section>
+
+        <div class="actions">
+          <button id="recommend-btn" class="btn btn-primary">
+            <span class="btn-ball"></span> Recommend Team
+          </button>
+          <button id="clear-btn" class="btn btn-secondary">
+            <span class="btn-icon">↺</span> Reset Squad
+          </button>
+        </div>
+        <p id="message" class="message"></p>
+
+        <!-- Weakness / resistance summary -->
+        <div class="section-title-wrap">
+          <h2>Type Matchup Matrix</h2>
+          <span class="section-tag">SYNERGY ANALYSIS</span>
+        </div>
+        <div class="table-wrap"><table id="matchup-table"></table></div>
+
+        <!-- Pokémon picker -->
+        <div class="section-title-wrap">
+          <h2>National Pokédex Registry</h2>
+          <span class="section-tag">SPECIES SELECTOR</span>
+        </div>
+        <div class="search-container">
+          <span class="search-icon">🔍</span>
+          <input id="search" class="search" placeholder="Search by name, dex #, or elemental type (e.g. Gengar, #025, Fire)…">
+        </div>
+        <div id="pokemon-list" class="pokemon-list"></div>
+      </main>
+    </div>
+
+    <!-- Bottom Pokédex Bezel Details -->
+    <footer class="pokedex-bottom-bar">
+      <div class="dpad-accent">
+        <span></span><span></span>
+      </div>
+      <div class="speaker-grill">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="bezel-vents">
+        <span></span><span></span><span></span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Pokémon detail popup (filled by script.js) -->
+  <div id="detail-modal" class="detail-modal" hidden>
+    <div class="detail-backdrop" data-close></div>
+    <div id="detail-panel" class="detail-panel" role="dialog" aria-modal="true" aria-label="Pokémon details"></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="subtitle.js"></script>
+  <script src="config.js"></script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
