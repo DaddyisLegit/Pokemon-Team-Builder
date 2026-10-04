@@ -4,7 +4,7 @@ A Pokédex-styled web app for building a balanced team of six Pokémon. Pick you
 
 Built with plain HTML, CSS and JavaScript. There is no framework, no build step and no backend.
 
-**Live demo:** `https://DaddyisLegit.github.io/Pokemon-Team-Builder/`
+**Live demo:** [https://daddyislegit.github.io/Pokemon-Team-Builder/](https://daddyislegit.github.io/Pokemon-Team-Builder/)
 
 ## Features
 
